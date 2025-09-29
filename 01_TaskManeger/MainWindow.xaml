@@ -1,0 +1,27 @@
+﻿<Window x:Class="_01_TaskManeger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_TaskManeger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="Button_Click">Refresh</Button>
+            <Button Click="Button_Click_1">Kill</Button>
+            <Button Click="Button_Click_2">Show Info</Button>
+            <TextBox Name="nameProc" Width="200"></TextBox>
+            <Button >Ok</Button>
+        </ToolBar>
+        <DataGrid Name="grid" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Process Name" Binding="{Binding ProcessName}" />
+                <DataGridTextColumn Header="PID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Total Processor Time" Binding="{Binding TotalProcessorTime}" />
+                <DataGridTextColumn Header="Priority" Binding="{Binding PriorityClass}" />
+                <DataGridTextColumn Header="User Name" Binding="{Binding UserName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
