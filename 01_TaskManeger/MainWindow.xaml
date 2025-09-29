@@ -12,7 +12,7 @@
             <Button Click="Button_Click_1">Kill</Button>
             <Button Click="Button_Click_2">Show Info</Button>
             <TextBox Name="nameProc" Width="200"></TextBox>
-            <Button >Ok</Button>
+            <Button Click="Button_Click_3" >Ok</Button>
         </ToolBar>
         <DataGrid Name="grid" AutoGenerateColumns="False" >
             <DataGrid.Columns>

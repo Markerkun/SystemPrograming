@@ -36,11 +36,25 @@ namespace _01_TaskManeger
         {
             Process process = (grid.SelectedItem as Process);
             string message = " ";
-            message += process.MachineName;
+            message += process.ProcessName;
+            message += " | ";
+            message += process.PriorityClass;
+            message += " | ";
+            message += process.TotalProcessorTime;
+            message += " | ";
+            message += process.UserProcessorTime;
+            message += " | ";
 
             MessageBox.Show(message, "Process info", MessageBoxButton.OK, MessageBoxImage.Information);
+            process.Start();
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            //Find by name
+            //grid.ItemsSource = Process.GetProcessesByName(nameProc.Text);
+            
+            Process.Start(nameProc.Text);
+        }
     }
-}
 }
