@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,17 +24,23 @@ namespace _01_TaskManeger
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            grid.ItemsSource = Process.GetProcesses();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            (grid.SelectedItem as Process).Kill();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Process process = (grid.SelectedItem as Process);
+            string message = " ";
+            message += process.MachineName;
 
+            MessageBox.Show(message, "Process info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
     }
+}
 }
