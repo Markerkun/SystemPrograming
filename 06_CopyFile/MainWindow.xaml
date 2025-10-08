@@ -1,0 +1,14 @@
+﻿<Window x:Class="_06_CopyFile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06_CopyFile"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Margin="10,10,750,405">From:</TextBlock>
+        <TextBox Name="nameProc" Margin="55,10,495,405"></TextBox>
+        <TextBlock Margin="10,50,750,365">To:</TextBlock>
+    </Grid>
+</Window>
