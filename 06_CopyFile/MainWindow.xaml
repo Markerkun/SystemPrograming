@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Margin="10,10,750,405">From:</TextBlock>
-        <TextBox Name="nameProc" Margin="55,10,495,405"></TextBox>
-        <TextBlock Margin="10,50,750,365">To:</TextBlock>
+        <TextBlock Margin="11,177,749,238">From:</TextBlock>
+        <TextBox Name="From" Margin="56,177,494,238"></TextBox>
+        <TextBlock Margin="11,217,749,198">To:</TextBlock>
+        <TextBox Name="To" Margin="56,217,494,198"></TextBox>
     </Grid>
 </Window>
