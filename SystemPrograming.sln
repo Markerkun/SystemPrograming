@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_TaskManeger", "01_TaskMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_CopyFile", "06_CopyFile\06_CopyFile.csproj", "{89947A17-EA2E-4C5A-825C-E9BEC15A6E6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_multyparalelthreads", "07_multyparalelthreads\07_multyparalelthreads.csproj", "{A0B1A378-0184-4CC2-98E4-B2DDFF5B9395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{89947A17-EA2E-4C5A-825C-E9BEC15A6E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89947A17-EA2E-4C5A-825C-E9BEC15A6E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89947A17-EA2E-4C5A-825C-E9BEC15A6E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B1A378-0184-4CC2-98E4-B2DDFF5B9395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B1A378-0184-4CC2-98E4-B2DDFF5B9395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B1A378-0184-4CC2-98E4-B2DDFF5B9395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B1A378-0184-4CC2-98E4-B2DDFF5B9395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
