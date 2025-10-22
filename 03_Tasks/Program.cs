@@ -88,6 +88,38 @@ class Program
         Console.WriteLine($"Average: {tAvg.Result}");
         Console.WriteLine($"Sum: {tSum.Result}");
 
+        //5
+        int[] nums = { 5, 3, 8, 3, 2, 8, 1, 5, 9, 2, 4, 4 };
+
+        Task<int[]> taska1 = Task.Run(() =>
+        {
+            Console.WriteLine("Deleting repeting values");
+            return nums.Distinct().ToArray();
+        });
+
+        Task<int[]> taska2 = taska1.ContinueWith(prev =>
+        {
+            Console.WriteLine("Sorting");
+            var sorted = prev.Result.OrderBy(x => x).ToArray();
+            return sorted;
+        });
+
+        Task taska3 = taska2.ContinueWith(prev =>
+        {
+            Console.WriteLine("What number I should find: ");
+            int value = int.Parse(Console.ReadLine());
+
+            int index = Array.BinarySearch(prev.Result, value);
+            if (index >= 0)
+                Console.WriteLine($"The number {value} was found at {index} index");
+            else
+                Console.WriteLine($"The number {value} wasn't found");
+        });
+
+        task3.Wait();
+        Console.WriteLine("Completed");
+    }
+
     }
 
 
