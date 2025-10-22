@@ -24,13 +24,35 @@
 
         <TextBox Name="From" FontSize="30" VerticalAlignment="Center" Height="42">From:</TextBox>
         <TextBox Name="To" FontSize="30" VerticalAlignment="Center" Height="42" Grid.Row="2">To:</TextBox>
-        <TextBox Name="sourceTb" Grid.Column="1" Text="{Binding Source}" Background="lightGray" ></TextBox>
-        <TextBox Name="destTb" Grid.Row="2" Grid.Column="1" Text="{Binding Source}" Background="lightGray" ></TextBox>
-        <TextBox Margin="11,70,169,76" Grid.Row="1">To:</TextBox>
-        <Button Name="Ok" Click="Button_Click" Content="Ok" HorizontalAlignment="Left" Margin="56,110,0,0" VerticalAlignment="Top" Width="75" Height="0" Grid.Row="1"/>
-        <Button Content="Copy" Name="Copy" Click="CopyBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="75" Height="60"  Grid.RowSpan="3" Grid.Column="2"/>
-        <ProgressBar Name="progress" Height="15" VerticalAlignment="Bottom" Grid.Row="3" Grid.ColumnSpan="2"></ProgressBar>
-        <ListBox Name="listBox" Grid.Row="3" Grid.ColumnSpan="3" Margin="10"/>
+        <TextBox Name="sourceTb" Grid.Column="1" Text="{Binding Source}" VerticalContentAlignment="Center" Background="lightGray" ></TextBox>
+        <TextBox Name="destTb" Grid.Row="2" Grid.Column="1" Text="{Binding Destination}" VerticalContentAlignment="Center"  Background="lightGray" ></TextBox>
+        <Button Content="Copy" Name="Copy" Click="Copy_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="75" Height="60"  Grid.RowSpan="3" Grid.Column="2"/>
+        <ListBox Name="listBox" Grid.Row="3" Grid.ColumnSpan="3" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ListBoxItem>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" MaxWidth="100"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto" MaxWidth="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TextBlock Grid.Column="0" Text="{Binding Filename}" Margin="5" TextTrimming="WordEllipsis"></TextBlock>
+                            <TextBlock Grid.Column="1"  Margin="5" > 
+                               <Run Text="{Binding Percentage}"></Run> %
+                            </TextBlock>
+
+
+                            <ProgressBar Grid.Column="2" Value="{Binding Percentage}"></ProgressBar>
+                        </Grid>
+                    </ListBoxItem>
+                </DataTemplate>
+
+
+
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
     
 </Window>
