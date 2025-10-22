@@ -10,6 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="1*"></ColumnDefinition>
             <ColumnDefinition Width ="6*"></ColumnDefinition>
+            <ColumnDefinition Width ="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
 
@@ -27,9 +28,9 @@
         <TextBox Name="destTb" Grid.Row="2" Grid.Column="1" Text="{Binding Source}" Background="lightGray" ></TextBox>
         <TextBox Margin="11,70,169,76" Grid.Row="1">To:</TextBox>
         <Button Name="Ok" Click="Button_Click" Content="Ok" HorizontalAlignment="Left" Margin="56,110,0,0" VerticalAlignment="Top" Width="75" Height="0" Grid.Row="1"/>
-        <ListBox Name="listBox" Grid.Row="3" Grid.ColumnSpan="2" Margin="10,10,10,10"/>
-        <Button Content="Copy" Name="Copy" Click="CopyBtn" HorizontalAlignment="Left" Margin="56,110,0,0" VerticalAlignment="Top" Width="75" Height="42" Grid.Row="1" Grid.Column="1"/>
-        <ProgressBar Name="progress" Height="15" VerticalAlignment="Bottom" Grid.Row="3" Grid.ColumnSpan="2" IsIndeterminate="{Binding IsWaiting}"></ProgressBar>
-        
+        <Button Content="Copy" Name="Copy" Click="CopyBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="75" Height="60"  Grid.RowSpan="3" Grid.Column="2"/>
+        <ProgressBar Name="progress" Height="15" VerticalAlignment="Bottom" Grid.Row="3" Grid.ColumnSpan="2"></ProgressBar>
+        <ListBox Name="listBox" Grid.Row="3" Grid.ColumnSpan="3" Margin="10"/>
     </Grid>
+    
 </Window>

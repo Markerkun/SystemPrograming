@@ -11,7 +11,7 @@ class Program
         for (int i = 0; i <= 50; i++)
         {
             Console.WriteLine(i);
-            Thread.Sleep(50); // затримка для видимості
+            Thread.Sleep(50); 
         }
     }
 
